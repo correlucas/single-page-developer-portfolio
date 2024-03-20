@@ -1,0 +1,14 @@
+@mixin simpleFlex($justify-content: unset, $align-items: unset) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin flex($direction: unset, $wrap: wrap, $align-content: unset, $justify-content: unset, $align-items: unset) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  align-content: $align-content;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
