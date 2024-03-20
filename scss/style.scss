@@ -1,5 +1,6 @@
 @import "reset";
 @import "colors";
+@import "typography";
 @import "mixins";
 @import "mediaQueries";
 @import "animations";
@@ -8,5 +9,5 @@ body {
   min-height: 100vh;
   line-height: 1.3;
   text-rendering: optimizeSpeed;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
