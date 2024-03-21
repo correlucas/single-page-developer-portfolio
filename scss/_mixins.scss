@@ -1,4 +1,4 @@
-@mixin simpleFlex($justify-content: unset, $align-items: unset) {
+@mixin simpleFlex($align-items: unset, $justify-content: unset) {
   display: flex;
   align-items: $align-items;
   justify-content: $justify-content;
