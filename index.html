@@ -8,7 +8,7 @@
 
   <title> Single Page Developer Portfolio | correlucas</title>
 
-  <link rel="icon" href="./images/favicon-32x32.png" type="image/x-icon">
+  <link rel="icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
   <link rel="stylesheet" href="./scss/style.css">
 </head>
 
@@ -70,11 +70,11 @@
     </ul>
   </section>
 
-  <section>
+  <section class="portfolio">
     <hr>
     <div>
-      <h3>Projects</h3>
-      <a href="#">Contact me</a>
+      <h2 class="heading-xl">Projects</h3>
+        <a href="#">Contact me</a>
     </div>
 
     <div class="projects">
@@ -118,6 +118,8 @@
         </picture>
         <h4>Design Portfolio</h4>
         <div>
+
+          header>div>ul>li*3
           <span>html</span>
           <span>css</span>
         </div>
@@ -148,6 +150,29 @@
 
   </section>
 
+  <div>
+    <div class="contact-title">
+      <h2 class="heading-xl">Contact</h2>
+      <p>I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
+    </div>
+    <form class="">
+      <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+      </div>
+      <div>
+        <button type="submit">Enviar Mensagem</button>
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>
