@@ -204,6 +204,38 @@ body {
   color: rgba(255, 255, 255, 0.975);
 }
 
+path:hover {
+  color: rgb(78, 225, 160);
+  fill: rgb(78, 225, 160);
+}
+
+path {
+  fill: rgba(255, 255, 255, 0.975);
+  color: rgba(255, 255, 255, 0.975);
+}
+
+.hero-section a {
+  position: relative;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.hero-section a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(78, 225, 160);
+  transition: width 0.5s ease;
+}
+.hero-section a:hover::after {
+  width: 3%;
+  transition: width 0.6s ease;
+}
+
 .container {
   max-width: 1110px;
   margin: 0 auto;
@@ -227,6 +259,29 @@ nav ul {
 .hero-section {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 104px;
+  position: relative;
+}
+.hero-section h1 {
+  margin-top: 126px;
+  text-align: left;
+  padding-bottom: 40px;
+  max-width: 706px;
+}
+.hero-section p {
+  max-width: 445px;
+  padding-bottom: 66px;
+}
+.hero-section span {
+  display: inline-block;
+  border-bottom: 5px solid rgb(78, 225, 160);
+}
+
+picture {
+  z-index: -6;
+  position: absolute;
+  right: 0;
+  top: -72px;
+  max-width: 445px;
 }/*# sourceMappingURL=style.css.map */
