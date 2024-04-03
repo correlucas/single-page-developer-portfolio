@@ -23,18 +23,17 @@ body {
 }
 
 nav {
-  @include simpleFlex(center, space-between);
+  @include simpleFlex(space-between, center);
   padding-top: 40px;
 
   ul {
-    @include simpleFlex(center, space-between);
+    @include simpleFlex(space-between, center);
     gap: 32px;
     margin-inline-end: 30px;
   }
 }
 
-path,
-a {
+path {
   fill: $white;
   transition: 0.5s ease;
   padding: 2px;
@@ -47,7 +46,8 @@ a {
   }
 }
 
-.hero-section a {
+.hero-section a,
+.portfolio a {
   position: relative;
   cursor: pointer;
   color: inherit;
@@ -101,7 +101,7 @@ a {
 }
 
 .hero-section {
-  @include simpleFlex(center, flex-start);
+  @include simpleFlex(flex-start, center);
   margin-bottom: 260px;
   position: relative;
 
@@ -123,7 +123,7 @@ a {
   }
 }
 
-picture {
+.profile-picture {
   z-index: -6;
   position: absolute;
   right: 20px;
@@ -135,13 +135,90 @@ hr {
   margin-bottom: 72px;
 }
 
+.footer-hr {
+  background: $dark-gray;
+  margin-top: 140px;
+  max-width: 1110px;
+  margin-inline: auto;
+}
+
 .experience {
   margin-bottom: 104px;
 }
 
 .experience ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   row-gap: 58px;
   justify-items: start;
+}
+
+h3 + p,
+h4:hover + div > span {
+  transition: 0.6s ease;
+  position: relative;
+}
+
+h3:hover + p,
+h4:hover + div > span {
+  color: $green;
+  transition: 0.6s ease;
+}
+
+.project-contact {
+  @include simpleFlex(space-between, center);
+  margin-bottom: 80px;
+}
+
+.projects {
+  display: grid;
+  text-transform: uppercase;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 140px;
+  column-gap: 30px;
+  row-gap: 80px;
+
+  picture {
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    cursor: pointer;
+    padding-bottom: 8px;
+  }
+
+  h4:hover {
+    opacity: 0.9;
+  }
+
+  span {
+    color: $gray;
+  }
+
+  .skills {
+    @include simpleFlex();
+    gap: 18px;
+  }
+}
+
+.contact {
+  background: $dark-gray;
+  padding-top: 120px;
+}
+
+footer {
+  background: $dark-gray;
+}
+
+.footer-itens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 90px;
+
+  ul {
+    @include simpleFlex();
+    gap: 32px;
+  }
 }
