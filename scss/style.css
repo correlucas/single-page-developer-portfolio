@@ -237,19 +237,21 @@ path:hover {
 }
 
 .hero-section a,
-.portfolio a {
+.portfolio a,
+button {
   position: relative;
   cursor: pointer;
   color: inherit;
   text-decoration: none;
-  text-transform: uppercase;
 }
 .hero-section a:hover,
-.portfolio a:hover {
+.portfolio a:hover,
+button:hover {
   color: rgb(78, 225, 160);
 }
 .hero-section a:after,
-.portfolio a:after {
+.portfolio a:after,
+button:after {
   content: "";
   position: absolute;
   left: 0;
@@ -260,7 +262,8 @@ path:hover {
   transition: width 0.5s ease;
 }
 .hero-section a:hover::after,
-.portfolio a:hover::after {
+.portfolio a:hover::after,
+button:hover::after {
   width: 3%;
   color: rgb(78, 225, 160);
   transition: width 0.6s ease;
@@ -340,6 +343,28 @@ hr {
   justify-items: start;
 }
 
+a,
+h4,
+span,
+button {
+  text-transform: uppercase;
+}
+
+form::-moz-placeholder, textarea::-moz-placeholder, input::-moz-placeholder {
+  text-transform: uppercase;
+}
+
+form::placeholder,
+textarea::placeholder,
+input::placeholder {
+  text-transform: uppercase;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  border-bottom: 1px solid rgb(78, 225, 160);
+}
+
 h3 + p,
 h4:hover + div > span {
   transition: 0.6s ease;
@@ -361,7 +386,6 @@ h4:hover + div > span {
 
 .projects {
   display: grid;
-  text-transform: uppercase;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 140px;
   -moz-column-gap: 30px;
@@ -369,7 +393,17 @@ h4:hover + div > span {
   row-gap: 80px;
 }
 .projects picture {
+  overflow: hidden;
   margin-bottom: 20px;
+}
+.projects img {
+  transition: all 1s ease;
+  transform: scale(1.05);
+}
+.projects img:hover {
+  cursor: pointer;
+  transform: scale(1);
+  opacity: 0.8;
 }
 .projects h4 {
   cursor: pointer;
@@ -390,7 +424,41 @@ h4:hover + div > span {
 
 .contact {
   background: rgb(36, 36, 36);
+}
+
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 220px;
   padding-top: 120px;
+}
+.contact-box h2 {
+  margin-bottom: 32px;
+}
+.contact-box .contact-title,
+.contact-box form {
+  margin-bottom: 146px;
+}
+.contact-box input,
+.contact-box textarea {
+  border: initial;
+  outline: initial;
+  background-color: initial;
+  resize: initial;
+  color: rgba(255, 255, 255, 0.975);
+  margin-top: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgb(217, 217, 217);
+}
+.contact-box form {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-direction: column;
+}
+.contact-box button {
+  margin-top: 32px;
+  align-self: end;
 }
 
 footer {
