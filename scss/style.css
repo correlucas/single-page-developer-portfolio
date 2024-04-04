@@ -209,6 +209,11 @@ body {
   margin-inline: auto;
   padding-inline: 20px;
 }
+@media (max-width: 840px) {
+  .container {
+    padding-inline: 40px;
+  }
+}
 
 @media (max-width: 840px) {
   .heading-xl {
@@ -253,7 +258,12 @@ path:hover {
 }
 @media (max-width: 840px) {
   .hero-section {
-    display: none;
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .hero-section {
+    flex-direction: column-reverse;
   }
 }
 .hero-section h1 {
@@ -262,13 +272,24 @@ path:hover {
   padding-bottom: 40px;
   max-width: 706px;
 }
+@media (max-width: 840px) {
+  .hero-section h1 {
+    max-width: 426px;
+  }
+}
 .hero-section p {
   max-width: 445px;
   padding-bottom: 66px;
+  max-width: 426px;
 }
 .hero-section span {
   display: inline-block;
   border-bottom: 5px solid rgb(78, 225, 160);
+}
+@media (max-width: 840px) {
+  .hero-section span {
+    padding-top: 12px;
+  }
 }
 .hero-section::before {
   content: url(../assets/images/pattern-rings.svg);
@@ -276,7 +297,7 @@ path:hover {
   top: 70px;
   left: -232px;
   overflow: hidden;
-  z-index: 0;
+  z-index: -5;
 }
 
 .hero-section a,
@@ -341,13 +362,33 @@ button:hover::after {
   top: -72px;
   max-width: 445px;
 }
+@media (max-width: 840px) {
+  .profile-picture {
+    right: 0;
+    max-width: 336px;
+  }
+}
+@media (max-width: 600px) {
+  .profile-picture {
+    position: unset;
+    right: unset;
+    top: unset;
+    z-index: -1;
+    transform: translateY(-156px);
+  }
+}
 .profile-picture::before {
   content: url(../assets/images/pattern-circle.svg);
   position: absolute;
   bottom: 108px;
   right: 378px;
   height: 120px;
-  z-index: 0;
+  z-index: -5;
+}
+@media (max-width: 840px) {
+  .profile-picture::before {
+    display: none;
+  }
 }
 
 hr {
@@ -450,6 +491,16 @@ h4:hover + div > span {
   align-items: unset;
   gap: 18px;
 }
+.projects .project-code {
+  display: none;
+}
+@media (max-width: 840px) {
+  .projects .project-code {
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+  }
+}
 
 .contact {
   background: rgb(36, 36, 36);
@@ -461,12 +512,26 @@ h4:hover + div > span {
   gap: 220px;
   padding-top: 120px;
 }
+@media (max-width: 840px) {
+  .contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: stretch;
+    padding-inline: 100px;
+  }
+}
 .contact-box h2 {
   margin-bottom: 32px;
 }
 .contact-box .contact-title,
 .contact-box form {
   margin-bottom: 146px;
+}
+@media (max-width: 840px) {
+  .contact-box .contact-title {
+    margin-bottom: 0;
+  }
 }
 .contact-box input,
 .contact-box textarea {
