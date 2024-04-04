@@ -210,6 +210,14 @@ body {
   padding-inline: 20px;
 }
 
+@media (max-width: 840px) {
+  .heading-xl {
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -2.045px;
+  }
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -234,6 +242,41 @@ path:hover {
   fill: rgb(78, 225, 160);
   color: rgb(78, 225, 160);
   transition: 0.5s ease;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 260px;
+  position: relative;
+}
+@media (max-width: 840px) {
+  .hero-section {
+    display: none;
+  }
+}
+.hero-section h1 {
+  margin-top: 126px;
+  text-align: left;
+  padding-bottom: 40px;
+  max-width: 706px;
+}
+.hero-section p {
+  max-width: 445px;
+  padding-bottom: 66px;
+}
+.hero-section span {
+  display: inline-block;
+  border-bottom: 5px solid rgb(78, 225, 160);
+}
+.hero-section::before {
+  content: url(../assets/images/pattern-rings.svg);
+  position: absolute;
+  top: 70px;
+  left: -232px;
+  overflow: hidden;
+  z-index: 0;
 }
 
 .hero-section a,
@@ -291,34 +334,20 @@ button:hover::after {
   transition: width 0.6s ease;
 }
 
-.hero-section {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 260px;
-  position: relative;
-}
-.hero-section h1 {
-  margin-top: 126px;
-  text-align: left;
-  padding-bottom: 40px;
-  max-width: 706px;
-}
-.hero-section p {
-  max-width: 445px;
-  padding-bottom: 66px;
-}
-.hero-section span {
-  display: inline-block;
-  border-bottom: 5px solid rgb(78, 225, 160);
-}
-
 .profile-picture {
   z-index: -6;
   position: absolute;
   right: 20px;
   top: -72px;
   max-width: 445px;
+}
+.profile-picture::before {
+  content: url(../assets/images/pattern-circle.svg);
+  position: absolute;
+  bottom: 108px;
+  right: 378px;
+  height: 120px;
+  z-index: 0;
 }
 
 hr {
@@ -345,7 +374,7 @@ hr {
 
 a,
 h4,
-span,
+.projects span,
 button {
   text-transform: uppercase;
 }

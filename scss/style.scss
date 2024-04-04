@@ -22,6 +22,14 @@ body {
   padding-inline: 20px;
 }
 
+.heading-xl {
+  @include display(tablet) {
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -2.045px;
+  }
+}
+
 nav {
   @include simpleFlex(space-between, center);
   padding-top: 40px;
@@ -44,6 +52,52 @@ path {
     color: $green;
     transition: 0.5s ease;
   }
+}
+
+.hero-section {
+  @include simpleFlex(flex-start, center);
+  margin-bottom: 260px;
+  position: relative;
+
+  @include display(tablet) {
+    display: none;
+  }
+
+  h1 {
+    margin-top: 126px;
+    text-align: left;
+    padding-bottom: 40px;
+    max-width: 706px;
+  }
+
+  p {
+    max-width: 445px;
+    padding-bottom: 66px;
+  }
+
+  span {
+    display: inline-block;
+    border-bottom: 5px solid $green;
+  }
+
+  &::before {
+    content: url(../assets/images/pattern-rings.svg);
+    position: absolute;
+    top: 70px;
+    left: -232px;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  // &::after {
+  //   content: url(../assets/images/pattern-rings.svg);
+  //   position: absolute;
+  //   bottom: -650px;
+  //   left: 50%;
+  //   right: -50%px;
+  //   overflow: hidden;
+  //   z-index: -2;
+  // }
 }
 
 .hero-section a,
@@ -100,35 +154,21 @@ button {
   }
 }
 
-.hero-section {
-  @include simpleFlex(flex-start, center);
-  margin-bottom: 260px;
-  position: relative;
-
-  h1 {
-    margin-top: 126px;
-    text-align: left;
-    padding-bottom: 40px;
-    max-width: 706px;
-  }
-
-  p {
-    max-width: 445px;
-    padding-bottom: 66px;
-  }
-
-  span {
-    display: inline-block;
-    border-bottom: 5px solid $green;
-  }
-}
-
 .profile-picture {
   z-index: -6;
   position: absolute;
   right: 20px;
   top: -72px;
   max-width: 445px;
+
+  &::before {
+    content: url(../assets/images/pattern-circle.svg);
+    position: absolute;
+    bottom: 108px;
+    right: 378px;
+    height: 120px;
+    z-index: 0;
+  }
 }
 
 hr {
@@ -155,7 +195,7 @@ hr {
 
 a,
 h4,
-span,
+.projects span,
 button {
   text-transform: uppercase;
 }
