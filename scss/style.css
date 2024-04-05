@@ -222,6 +222,13 @@ body {
     letter-spacing: -2.045px;
   }
 }
+@media (max-width: 600px) {
+  .heading-xl {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -2.045px;
+  }
+}
 
 nav {
   display: flex;
@@ -235,6 +242,16 @@ nav ul {
   align-items: center;
   gap: 32px;
   margin-inline-end: 30px;
+}
+@media (max-width: 600px) {
+  nav {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    margin-inline-end: unset;
+  }
 }
 
 path {
@@ -263,6 +280,7 @@ path:hover {
 }
 @media (max-width: 600px) {
   .hero-section {
+    text-align: center;
     flex-direction: column-reverse;
   }
 }
@@ -275,6 +293,15 @@ path:hover {
 @media (max-width: 840px) {
   .hero-section h1 {
     max-width: 426px;
+  }
+}
+@media (max-width: 600px) {
+  .hero-section h1 {
+    margin-top: unset;
+    max-width: 340px;
+    padding-top: 40px;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 .hero-section p {
@@ -365,7 +392,9 @@ button:hover::after {
 @media (max-width: 840px) {
   .profile-picture {
     right: 0;
-    max-width: 336px;
+    top: -100px;
+    height: 580px;
+    max-width: 350px;
   }
 }
 @media (max-width: 600px) {
@@ -374,7 +403,7 @@ button:hover::after {
     right: unset;
     top: unset;
     z-index: -1;
-    transform: translateY(-156px);
+    transform: translateY(-200px);
   }
 }
 .profile-picture::before {
@@ -411,6 +440,14 @@ hr {
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   row-gap: 58px;
   justify-items: start;
+}
+@media (max-width: 600px) {
+  .experience ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 a,
@@ -462,6 +499,12 @@ h4:hover + div > span {
        column-gap: 30px;
   row-gap: 80px;
 }
+@media (max-width: 600px) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .projects picture {
   overflow: hidden;
   margin-bottom: 20px;
@@ -478,6 +521,11 @@ h4:hover + div > span {
 .projects h4 {
   cursor: pointer;
   padding-bottom: 8px;
+}
+@media (max-width: 600px) {
+  .projects h4 {
+    font-size: 20px;
+  }
 }
 .projects h4:hover {
   opacity: 0.9;
@@ -521,12 +569,27 @@ h4:hover + div > span {
     padding-inline: 100px;
   }
 }
+@media (max-width: 600px) {
+  .contact-box {
+    display: flex;
+    gap: 32px;
+    text-align: center;
+    align-items: stretch;
+    padding-inline: 20px;
+  }
+}
 .contact-box h2 {
   margin-bottom: 32px;
 }
 .contact-box .contact-title,
 .contact-box form {
   margin-bottom: 146px;
+}
+@media (max-width: 600px) {
+  .contact-box .contact-title,
+  .contact-box form {
+    margin-bottom: 40px;
+  }
 }
 @media (max-width: 840px) {
   .contact-box .contact-title {
@@ -554,6 +617,11 @@ h4:hover + div > span {
   margin-top: 32px;
   align-self: end;
 }
+@media (max-width: 600px) {
+  .contact-box button {
+    align-self: center;
+  }
+}
 
 footer {
   background: rgb(36, 36, 36);
@@ -565,6 +633,17 @@ footer {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 90px;
+}
+@media (max-width: 600px) {
+  .footer-itens {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 40px;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 .footer-itens ul {
   display: flex;

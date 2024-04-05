@@ -32,6 +32,12 @@ body {
     line-height: 72px;
     letter-spacing: -2.045px;
   }
+
+  @include display(mobile) {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -2.045px;
+  }
 }
 
 nav {
@@ -42,6 +48,16 @@ nav {
     @include simpleFlex(space-between, center);
     gap: 32px;
     margin-inline-end: 30px;
+  }
+
+  @include display(mobile) {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+      margin-inline-end: unset;
+    }
   }
 }
 
@@ -68,6 +84,7 @@ path {
   }
 
   @include display(mobile) {
+    text-align: center;
     flex-direction: column-reverse;
   }
 
@@ -79,6 +96,14 @@ path {
 
     @include display(tablet) {
       max-width: 426px;
+    }
+
+    @include display(mobile) {
+      margin-top: unset;
+      max-width: 340px;
+      padding-top: 40px;
+      margin: 0 auto;
+      text-align: center;
     }
   }
 
@@ -169,7 +194,9 @@ button {
 
   @include display(tablet) {
     right: 0;
-    max-width: 336px;
+    top: -100px;
+    height: 580px;
+    max-width: 350px;
   }
 
   @include display(mobile) {
@@ -177,7 +204,7 @@ button {
     right: unset;
     top: unset;
     z-index: -1;
-    transform: translateY(-156px);
+    transform: translateY(-200px);
   }
 
   &::before {
@@ -214,6 +241,13 @@ hr {
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   row-gap: 58px;
   justify-items: start;
+
+  @include display(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 a,
@@ -260,6 +294,11 @@ h4:hover + div > span {
   column-gap: 30px;
   row-gap: 80px;
 
+  @include display(mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+
   picture {
     overflow: hidden;
     margin-bottom: 20px;
@@ -279,6 +318,9 @@ h4:hover + div > span {
   h4 {
     cursor: pointer;
     padding-bottom: 8px;
+    @include display(mobile) {
+      font-size: 20px;
+    }
   }
 
   h4:hover {
@@ -323,6 +365,14 @@ h4:hover + div > span {
     padding-inline: 100px;
   }
 
+  @include display(mobile) {
+    display: flex;
+    gap: 32px;
+    text-align: center;
+    align-items: stretch;
+    padding-inline: 20px;
+  }
+
   h2 {
     margin-bottom: 32px;
   }
@@ -330,6 +380,10 @@ h4:hover + div > span {
   .contact-title,
   form {
     margin-bottom: 146px;
+
+    @include display(mobile) {
+      margin-bottom: 40px;
+    }
   }
 
   .contact-title {
@@ -358,6 +412,10 @@ h4:hover + div > span {
   button {
     margin-top: 32px;
     align-self: end;
+
+    @include display(mobile) {
+      align-self: center;
+    }
   }
 }
 
@@ -371,6 +429,16 @@ footer {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 90px;
+
+  @include display(mobile) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 40px;
+    flex-direction: column;
+    gap: 20px;
+  }
 
   ul {
     @include simpleFlex();
