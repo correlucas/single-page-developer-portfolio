@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
 * {
   margin: 0;
@@ -505,18 +506,47 @@ h4:hover + div > span {
     flex-direction: column;
   }
 }
-.projects picture {
-  overflow: hidden;
-  margin-bottom: 20px;
+.projects .overlay {
+  position: relative;
+  display: inline-block;
 }
-.projects img {
-  transition: all 1s ease;
-  transform: scale(1.05);
+.projects .overlay:hover .links {
+  opacity: 1; /* Torna os links visíveis durante o hover */
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
 }
-.projects img:hover {
-  cursor: pointer;
-  transform: scale(1);
+.projects .links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.projects .links a {
+  display: inline-block;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+.projects .overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(21, 21, 21);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.projects .overlay:hover::before {
   opacity: 0.8;
+  transition: all 0.3s ease;
+}
+.projects .overlay picture {
+  overflow: hidden;
+  padding-bottom: 10px;
 }
 .projects h4 {
   cursor: pointer;

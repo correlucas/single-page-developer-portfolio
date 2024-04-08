@@ -299,20 +299,53 @@ h4:hover + div > span {
     flex-direction: column;
   }
 
-  picture {
-    overflow: hidden;
-    margin-bottom: 20px;
+  .overlay {
+    position: relative;
+    display: inline-block;
   }
 
-  img {
-    transition: all 1s ease;
-    transform: scale(1.05);
+  .overlay:hover .links {
+    opacity: 1; /* Torna os links visíveis durante o hover */
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+  }
 
-    &:hover {
-      cursor: pointer;
-      transform: scale(1);
-      opacity: 0.8;
-    }
+  .links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .links a {
+    display: inline-block;
+    margin: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .overlay:hover::before {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+
+  .overlay picture {
+    overflow: hidden;
+    padding-bottom: 10px;
   }
 
   h4 {
