@@ -443,13 +443,22 @@ h4:hover + div > span {
   }
 
   button {
-    margin-top: 32px;
+    margin-top: 18px;
     align-self: end;
 
     @include display(mobile) {
       align-self: center;
     }
   }
+}
+
+.error-message {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  color: $red;
+  margin-top: 10px;
+  align-self: right;
 }
 
 footer {

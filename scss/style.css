@@ -644,13 +644,22 @@ h4:hover + div > span {
   flex-direction: column;
 }
 .contact-box button {
-  margin-top: 32px;
+  margin-top: 18px;
   align-self: end;
 }
 @media (max-width: 600px) {
   .contact-box button {
     align-self: center;
   }
+}
+
+.error-message {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  color: rgb(255, 111, 91);
+  margin-top: 10px;
+  align-self: right;
 }
 
 footer {
