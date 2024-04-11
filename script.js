@@ -14,19 +14,34 @@ form.addEventListener("submit", function (event) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const nameError = document.getElementById('error-name');
+  const nameIconError = nameInput.closest(".form-test").querySelector("img");
   const emailError = document.getElementById('error-email');
+  const emailIconError = emailInput.closest(".form-test").querySelector("img");
   const messageError = document.getElementById('error-message');
+  const messageIconError = messageInput.closest(".form-test").querySelector("img");
 
-  if (nameInput.value.trim() === "") {
+  if (name === "") {
     nameError.style.opacity = '1';
+    nameIconError.style.display = "block"
+  } else {
+    nameError.style.opacity = '0';
+    nameIconError.style.display = "none"
   }
-
-  if (emailInput.value.trim() === "") {
+  
+  if (email === "") {
     emailError.style.opacity = '1';
+    emailIconError.style.display = "block"
+  } else {
+    emailError.style.opacity = '0';
+    emailIconError.style.display = "none"
   }
-
-  if (emailInput.value.trim() === "") {
+  
+  if (message === "") {
     messageError.style.opacity = '1';
+    messageIconError.style.display = "block"
+  } else {
+    messageError.style.opacity = '0';
+    messageIconError.style.display = "none"    
   }
 })
 

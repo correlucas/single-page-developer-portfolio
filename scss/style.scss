@@ -116,6 +116,7 @@ path {
   span {
     display: inline-block;
     border-bottom: 5px solid $green;
+
     @include display(tablet) {
       padding-top: 12px;
     }
@@ -270,14 +271,14 @@ input {
   border-bottom: 1px solid $green;
 }
 
-h3 + p,
-h4:hover + div > span {
+h3+p,
+h4:hover+div>span {
   transition: 0.6s ease;
   position: relative;
 }
 
-h3:hover + p,
-h4:hover + div > span {
+h3:hover+p,
+h4:hover+div>span {
   color: $green;
   transition: 0.6s ease;
 }
@@ -305,7 +306,8 @@ h4:hover + div > span {
   }
 
   .overlay:hover .links {
-    opacity: 1; /* Torna os links visíveis durante o hover */
+    opacity: 1;
+    /* Torna os links visíveis durante o hover */
     transform: translate(-50%, -50%);
     transition: all 0.3s ease;
   }
@@ -351,6 +353,7 @@ h4:hover + div > span {
   h4 {
     cursor: pointer;
     padding-bottom: 8px;
+
     @include display(mobile) {
       font-size: 20px;
     }
@@ -435,11 +438,26 @@ h4:hover + div > span {
     margin-top: 32px;
     padding-bottom: 16px;
     border-bottom: 1px solid $gray;
+    width: 100%;
   }
 
+  
   form {
     @include simpleFlex();
     flex-direction: column;
+  }
+
+  .name-form,
+  .email-form,
+  .message-form {
+    position: relative;
+  }
+
+  .icon-error {
+    display: none;
+    position: absolute;
+    right: 10px;
+    bottom: 45px;
   }
 
   button {

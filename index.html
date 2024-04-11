@@ -194,16 +194,29 @@
         <p class="body">I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
       </div>
       <form novalidate>
-        <label for="name"></label>
-        <input type="text" id="name" placeholder="Name" name="name" required>
-        <p class="error-message" id="error-name">Sorry, invalid format here</p>
-        <label for="email"></label>
-        <input type="email" id="email" placeholder="Email" name="email" required>
-        <p class="error-message" id="error-email">Sorry, invalid email format here</p>
-        <label for="message"></label>
-        <div class="error-message" id="email-error"></div>
-        <textarea id="message" placeholder="Message" name="message" rows="4" required></textarea>
-        <p class="error-message" id="error-message">Please doesn't leave the message field empty! </p>
+
+        <div class="name-form form-test">
+          <label for="name"></label>
+          <input type="text" id="name" placeholder="Name" name="name" required>
+          <p class="error-message" id="error-name">Sorry, invalid format here</p>
+          <img src="assets/images/error-msg.svg" alt="" class="icon-error">
+        </div>
+
+        <div class="email-form form-test">
+          <label for="email"></label>
+          <input type="email" id="email" placeholder="Email" name="email" required>
+          <p class="error-message" id="error-email">Sorry, invalid email format here</p>
+          <img src="assets/images/error-msg.svg" alt="" class="icon-error">
+        </div>
+
+        <div class="message-form form-test">
+          <label for="message"></label>
+          <div class="error-message" id="email-error"></div>
+          <textarea id="message" placeholder="Message" name="message" rows="4" required></textarea>
+          <p class="error-message" id="error-message">Please doesn't leave the message field empty! </p>
+          <img src="assets/images/error-msg.svg" alt="" class="icon-error">
+        </div>
+
         <button name="button" type="submit" id="button">Send message</button>
       </form>
     </div>
