@@ -1,35 +1,20 @@
 const form = document.querySelector('form');
-const inputs = document.querySelectorAll('input');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const messageInput = document.getElementById('message');
 const button = document.getElementById('button');
+const formFields = document.querySelectorAll(".required") // Captura todos os campos (2 inputs e 1 textarea)
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const email = emailInput.value.trim();
-  const name = nameInput.value.trim();
-  const message = messageInput.value.trim();
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  formFields.forEach((field) => {
+    const errorIcon = field.closest(".form-test").querySelector(".icon-error"); // Captura o icone de erro daquele campo
+    const errorMessage = field.closest(".form-test").querySelector(".error-message"); // Captura a mensagem de erro daquele campo
 
-  const nameError = document.getElementById('error-name');
-  const emailError = document.getElementById('error-email');
-  const messageError = document.getElementById('error-message');
-
-  if (nameInput.value.trim() === "") {
-    nameError.style.opacity = '1';
-  }
-
-  if (emailInput.value.trim() === "") {
-    emailError.style.opacity = '1';
-  }
-
-  if (emailInput.value.trim() === "") {
-    messageError.style.opacity = '1';
-  }
-})
-
-name.addEventListener('input', function () {
-  nameError.style.opacity = '0';
+    if (field.value === '') {
+      errorIcon.style.display = 'block';
+      errorMessage.style.opacity = '1';
+    } else {
+      errorIcon.style.display = 'none';
+      errorMessage.style.opacity = '0';
+    }
+  })
 })

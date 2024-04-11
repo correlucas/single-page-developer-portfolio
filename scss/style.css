@@ -511,7 +511,8 @@ h4:hover + div > span {
   display: inline-block;
 }
 .projects .overlay:hover .links {
-  opacity: 1; /* Torna os links visíveis durante o hover */
+  opacity: 1;
+  /* Torna os links visíveis durante o hover */
   transform: translate(-50%, -50%);
   transition: all 0.3s ease;
 }
@@ -636,12 +637,24 @@ h4:hover + div > span {
   margin-top: 32px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgb(217, 217, 217);
+  width: 100%;
 }
 .contact-box form {
   display: flex;
   justify-content: unset;
   align-items: unset;
   flex-direction: column;
+}
+.contact-box .name-form,
+.contact-box .email-form,
+.contact-box .message-form {
+  position: relative;
+}
+.contact-box .icon-error {
+  display: none;
+  position: absolute;
+  right: 10px;
+  bottom: 45px;
 }
 .contact-box button {
   margin-top: 18px;
