@@ -194,24 +194,26 @@
         <p class="body">I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
       </div>
       <form novalidate>
-        <div class="form-name">
+        <div class="form-name form-input">
           <label for="name"></label>
           <input class="input-name" type="text" id="name" placeholder="Name" name="name" required>
           <p class="error-message" id="error-name">Invalid format. Only alphabetical characters allowed.</p>
-          <img class="icon-error" src="assets/images/error-msg.svg" alt="">
+          <img class="error-icon icon-name" src="assets/images/error-msg.svg" alt="">
         </div>
 
-        <div class="form-email">
+        <div class="form-email form-input">
           <label for="email"></label>
           <input type="email" id="email" placeholder="Email" name="email" required>
           <p class="error-message" id="error-email">Sorry, invalid email format!</p>
+          <img class="error-icon icon-email" src="assets/images/error-msg.svg" alt="">
         </div>
 
-        <div class="form-message">
+        <div class="form-message form-input">
           <label for="message"></label>
           <div class="error-message" id="email-error"></div>
           <textarea id="message" placeholder="Message" name="message" rows="4" required></textarea>
           <p class="error-message" id="error-message">Please doesn't leave the message field empty! </p>
+          <img class="error-icon icon-message " src="assets/images/error-msg.svg" alt="">
         </div>
         <button name="button" type="submit" id="button">Send message</button>
       </form>

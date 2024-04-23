@@ -600,12 +600,18 @@ h4:hover + div > span {
   justify-content: space-between;
   align-items: stretch;
   flex-direction: column;
+  position: relative;
+  text-align: left;
 }
-.contact-box .icon-error {
-  display: block;
+.contact-box .error-icon,
+.contact-box .icon-name,
+.contact-box .icon-email,
+.contact-box .icon-message {
+  display: none;
   position: absolute;
-  right: 0;
+  right: 4px;
   bottom: 0;
+  top: 28px;
 }
 @media (max-width: 840px) {
   .contact-box {
@@ -672,7 +678,6 @@ h4:hover + div > span {
 
 .error-message {
   display: flex;
-  justify-content: flex-end;
   opacity: 0;
   color: rgb(255, 111, 91);
   margin-top: 10px;
