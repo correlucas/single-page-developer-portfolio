@@ -16,6 +16,7 @@ form.addEventListener("submit", function (event) {
   const email = emailInput.value.trim();
   const name = nameInput.value.trim();
   const message = messageInput.value.trim();
+  const nameRegex = /^[a-zA-Z]+$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (nameInput.value.trim() === "") {
@@ -28,6 +29,14 @@ form.addEventListener("submit", function (event) {
 
   if (messageInput.value.trim() === "") {
     messageError.style.opacity = '1';
+  }
+
+  if (!emailRegex.test(email)) {
+    emailError.style.opacity = '1';
+  }
+
+  if (!nameRegex.test(name)) {
+    nameError.style.opacity = '1';
   }
 })
 

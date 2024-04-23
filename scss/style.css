@@ -413,7 +413,7 @@ button:hover::after {
   bottom: 108px;
   right: 378px;
   height: 120px;
-  z-index: -5;
+  z-index: 5;
 }
 @media (max-width: 840px) {
   .profile-picture::before {
@@ -589,6 +589,23 @@ h4:hover + div > span {
   grid-template-columns: 1fr 1fr;
   gap: 220px;
   padding-top: 120px;
+}
+.contact-box .input-name {
+  position: relative;
+}
+.contact-box .form-name,
+.contact-box .form-email,
+.contact-box .form-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+}
+.contact-box .icon-error {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 @media (max-width: 840px) {
   .contact-box {

@@ -213,7 +213,7 @@ button {
     bottom: 108px;
     right: 378px;
     height: 120px;
-    z-index: -5;
+    z-index: 5;
 
     @include display(tablet) {
       display: none;
@@ -389,6 +389,26 @@ h4:hover + div > span {
   grid-template-columns: 1fr 1fr;
   gap: 220px;
   padding-top: 120px;
+
+  .input-name {
+    position: relative;
+  }
+
+  .form-name,
+  .form-email,
+  .form-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .icon-error {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 
   @include display(tablet) {
     display: flex;
